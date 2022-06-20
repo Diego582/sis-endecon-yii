@@ -36,6 +36,7 @@ class Usuarios extends \yii\db\ActiveRecord
             [['name', 'email', 'password'], 'string', 'max' => 255],
             [['profile_photo_path'], 'string', 'max' => 2048],
             [['email'], 'unique'],
+            [['name', 'email', 'password'], 'required'],
         ];
     }
 
