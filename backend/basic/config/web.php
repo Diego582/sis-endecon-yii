@@ -49,7 +49,11 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [],
+            'rules' => [[
+                'class' => 'yii\rest\UrlRule',
+                'pluralize' => false,
+                'controller' => ['apiv1/usuario', 'apiv1/beneficiario', 'apiv1/credito', 'apiv1/expediente'],
+            ]],
         ],
 
     ],
